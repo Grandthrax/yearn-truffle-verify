@@ -16,7 +16,7 @@ module.exports = async function(deployer, network, accounts)  {
 
   const strategyCurveBTC = await deployer.deploy(StrategyCurveBTCVoterProxy, CONTROLLER_ADDR);
 
-  // const controller = await ControllerInterface.at(CONTROLLER_ADDR);
+  const strategyCurveBTC.deployed();;
 
   // deployer.deploy(StrategyCurveYVoterProxy, controller.address);
 };
