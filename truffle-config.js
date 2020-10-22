@@ -40,7 +40,7 @@ module.exports = {
 	},
 	compilers: {
 		solc: {
-			version: "0.5.17",
+			version: "0.6.1",
 			settings: {
 				optimizer: {
 					enabled: true,
@@ -89,6 +89,20 @@ module.exports = {
 				return new HDWalletProvider(
 					mnemonic,
 					`https://rinkeby.infura.io/v3/${infuraKey}`,
+					defaultAddressIndex,
+					addressCount
+				);
+			},
+			gas: gas,
+			gasPrice: web3.utils.toWei(gasPrice, 'gwei'),
+			network_id: '4',
+			skipDryRun: true
+		},
+		infuraRopsten: {
+			provider: function() {
+				return new HDWalletProvider(
+					mnemonic,
+					`https://ropsten.infura.io/v3/${infuraKey}`,
 					defaultAddressIndex,
 					addressCount
 				);
