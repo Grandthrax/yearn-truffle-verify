@@ -16,6 +16,4 @@ interface VoterProxy {
     function deposit(address _gauge, address _token) external;
 
     function harvest(address _gauge) external;
-
-    function lock() external;
 }
